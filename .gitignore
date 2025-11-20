@@ -1,0 +1,16 @@
+# Bỏ qua thư mục Visual Studio tạm thời
+.vs/
+
+# Bỏ qua thư mục bin và obj (chứa các tệp đã biên dịch)
+bin/
+obj/
+*.user
+*.suo
+
+packages/
+
+*.log
+*.cache
+
+
+# ... và các mục khác nếu cần (ví dụ: các tệp cài đặt)
