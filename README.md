@@ -12,7 +12,7 @@ Dự án bao gồm các chức năng cơ bản:
 Để chạy dự án này trên máy cục bộ, hãy làm theo các bước sau:
 
 1.  **Clone repository về máy:**
-    git clone [https://github.com/rumvn84/HOQUANGDONG_3303_StudentManager.git](https://github.com/vhdl07/DANLE-72813-StudentManager1.git)
+    git clone (https://github.com/vhdl07/DANLE-72813-StudentManager1.git)
     hoặc có thể mở VS chọn Clone a reposiotry và dán link trên vào và mở .
     ```
 2.  **Mở dự án:**
@@ -22,8 +22,8 @@ Dự án bao gồm các chức năng cơ bản:
     - Nhấn nút `Start` hoặc `F5` trong Visual Studio để build và chạy chương trình.
 
 ## 3. Danh sách 5 Commit chính
-1.  **Commit 1:** `Initial commit: StudentManager project` (Khởi tạo dự án)
-2.  **Commit 2:** `UI: add main form layout and controls` (Thiết kế giao diện)
-3.  **Commit 3:** `Model: add Student class` (Tạo lớp đối tượng sinh viên)
-4.  **Commit 4:** `Feature: implement add/update/delete` (Hoàn thiện chức năng thêm/sửa/xóa)
-5.  **Commit 5:** `Feature: add search function` (Thêm chức năng tìm kiếm)
+1.  **Commit 1:** `Initial commit: StudentManager project` 
+2.  **Commit 2:** `UI: add main form layout and controls` 
+3.  **Commit 3:** `Model: add Student class` 
+4.  **Commit 4:** `Feature: implement add/update/delete` 
+5.  **Commit 5:** `Feature: add search function` 
