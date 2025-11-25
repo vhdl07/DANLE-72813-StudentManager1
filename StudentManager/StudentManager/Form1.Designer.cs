@@ -32,13 +32,13 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.txtId = new System.Windows.Forms.TextBox();
+            this.txtName = new System.Windows.Forms.TextBox();
+            this.txtClass = new System.Windows.Forms.TextBox();
+            this.txtGrade = new System.Windows.Forms.TextBox();
+            this.btnAdd = new System.Windows.Forms.Button();
+            this.btnUpdate = new System.Windows.Forms.Button();
+            this.btnDelete = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.dgvStudents = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -82,63 +82,66 @@
             this.label4.TabIndex = 3;
             this.label4.Text = "Điểm";
             // 
-            // textBox1
+            // txtId
             // 
-            this.textBox1.Location = new System.Drawing.Point(129, 21);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 26);
-            this.textBox1.TabIndex = 4;
+            this.txtId.Location = new System.Drawing.Point(129, 21);
+            this.txtId.Name = "txtId";
+            this.txtId.Size = new System.Drawing.Size(100, 26);
+            this.txtId.TabIndex = 4;
             // 
-            // textBox2
+            // txtName
             // 
-            this.textBox2.Location = new System.Drawing.Point(129, 62);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 26);
-            this.textBox2.TabIndex = 5;
+            this.txtName.Location = new System.Drawing.Point(129, 62);
+            this.txtName.Name = "txtName";
+            this.txtName.Size = new System.Drawing.Size(100, 26);
+            this.txtName.TabIndex = 5;
             // 
-            // textBox3
+            // txtClass
             // 
-            this.textBox3.Location = new System.Drawing.Point(129, 110);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 26);
-            this.textBox3.TabIndex = 6;
+            this.txtClass.Location = new System.Drawing.Point(129, 110);
+            this.txtClass.Name = "txtClass";
+            this.txtClass.Size = new System.Drawing.Size(100, 26);
+            this.txtClass.TabIndex = 6;
             // 
-            // textBox4
+            // txtGrade
             // 
-            this.textBox4.Location = new System.Drawing.Point(129, 162);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 26);
-            this.textBox4.TabIndex = 7;
+            this.txtGrade.Location = new System.Drawing.Point(129, 162);
+            this.txtGrade.Name = "txtGrade";
+            this.txtGrade.Size = new System.Drawing.Size(100, 26);
+            this.txtGrade.TabIndex = 7;
             // 
-            // button1
+            // btnAdd
             // 
-            this.button1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.button1.Location = new System.Drawing.Point(81, 291);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(102, 51);
-            this.button1.TabIndex = 8;
-            this.button1.Text = "Add";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnAdd.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnAdd.Location = new System.Drawing.Point(81, 291);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(102, 51);
+            this.btnAdd.TabIndex = 8;
+            this.btnAdd.Text = "Add";
+            this.btnAdd.UseVisualStyleBackColor = false;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
-            // button2
+            // btnUpdate
             // 
-            this.button2.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.button2.Location = new System.Drawing.Point(247, 291);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(102, 51);
-            this.button2.TabIndex = 9;
-            this.button2.Text = "Update";
-            this.button2.UseVisualStyleBackColor = false;
+            this.btnUpdate.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnUpdate.Location = new System.Drawing.Point(247, 291);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(102, 51);
+            this.btnUpdate.TabIndex = 9;
+            this.btnUpdate.Text = "Update";
+            this.btnUpdate.UseVisualStyleBackColor = false;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
-            // button3
+            // btnDelete
             // 
-            this.button3.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.button3.Location = new System.Drawing.Point(425, 291);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(102, 51);
-            this.button3.TabIndex = 10;
-            this.button3.Text = "Delete";
-            this.button3.UseVisualStyleBackColor = false;
+            this.btnDelete.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnDelete.Location = new System.Drawing.Point(425, 291);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(102, 51);
+            this.btnDelete.TabIndex = 10;
+            this.btnDelete.Text = "Delete";
+            this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // button4
             // 
@@ -166,12 +169,12 @@
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.txtId);
             this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.textBox2);
+            this.panel1.Controls.Add(this.txtName);
             this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.textBox3);
-            this.panel1.Controls.Add(this.textBox4);
+            this.panel1.Controls.Add(this.txtClass);
+            this.panel1.Controls.Add(this.txtGrade);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Location = new System.Drawing.Point(54, 42);
             this.panel1.Name = "panel1";
@@ -184,9 +187,9 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.dgvStudents);
             this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnDelete);
+            this.Controls.Add(this.btnUpdate);
+            this.Controls.Add(this.btnAdd);
             this.Name = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.dgvStudents)).EndInit();
             this.panel1.ResumeLayout(false);
@@ -202,13 +205,13 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.TextBox txtId;
+        private System.Windows.Forms.TextBox txtName;
+        private System.Windows.Forms.TextBox txtClass;
+        private System.Windows.Forms.TextBox txtGrade;
+        private System.Windows.Forms.Button btnAdd;
+        private System.Windows.Forms.Button btnUpdate;
+        private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.DataGridView dgvStudents;
         private System.Windows.Forms.Panel panel1;

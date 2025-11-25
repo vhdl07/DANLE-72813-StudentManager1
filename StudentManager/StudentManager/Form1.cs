@@ -27,19 +27,19 @@ namespace StudentManager
         }
 
         //Nút Add 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnAdd_Click(object sender, EventArgs e)
         {
          
-            if (string.IsNullOrWhiteSpace(textBox1.Text) ||
-                    string.IsNullOrWhiteSpace(textBox2.Text) ||
-                    string.IsNullOrWhiteSpace(textBox3.Text) ||
-                    string.IsNullOrWhiteSpace(textBox4.Text))
+            if (string.IsNullOrWhiteSpace(txtId.Text) ||
+                    string.IsNullOrWhiteSpace(txtName.Text) ||
+                    string.IsNullOrWhiteSpace(txtClass.Text) ||
+                    string.IsNullOrWhiteSpace(txtGrade.Text))
                 
             {
                 MessageBox.Show("Vui lòng nhập đầy đủ thông tin!");
                 return;
             }
-            if (!double.TryParse(textBox4.Text, out double grade))
+            if (!double.TryParse(txtGrade.Text, out double grade))
             {
                 MessageBox.Show("Điểm phải là số!");
                 return;
@@ -47,32 +47,32 @@ namespace StudentManager
             Student s = new Student
 
             {
-                Id = textBox1.Text,
-                Name = textBox2.Text,
-                Class = textBox3.Text,
-                Grade = double.TryParse(textBox4.Text, out double g) ? g : 0
+                Id = txtId.Text,
+                Name = txtName.Text,
+                Class = txtClass.Text,
+                Grade = grade 
             };
 
             students.Add(s);
-            MessageBox.Show("Đã thêm sinh viên!");
             DisplayStudents();
+            MessageBox.Show("Đã thêm sinh viên!");
         }
         //Nút Update
-        private void button2_Click(object sender, EventArgs e)
+        private void btnUpdate_Click(object sender, EventArgs e)
         {
-            var student = students.FirstOrDefault(x => x.Id == textBox1.Text);
+            var student = students.FirstOrDefault(x => x.Id == txtId.Text);
             if (student != null)
             {
-                if (!double.TryParse(textBox4.Text, out double grade))
+                if (!double.TryParse(txtGrade.Text, out double grade))
                 {  MessageBox.Show("Điểm phải là số!");
                     return;
                 }
 
-                student.Name = textBox2.Text;
-                student.Class = textBox3.Text;
-                student.Grade = double.TryParse(textBox4.Text, out double g) ? g : 0;
-                MessageBox.Show("Cập nhật thành công!");
+                student.Name = txtName.Text;
+                student.Class = txtClass.Text;
+                student.Grade = grade;
                 DisplayStudents();
+                MessageBox.Show("Cập nhật thành công!");
             }
             else
             {
@@ -80,18 +80,18 @@ namespace StudentManager
             }
         }
         //Nút Delete
-        private void button3_Click(object sender, EventArgs e)
+        private void btnDelete_Click(object sender, EventArgs e)
         {
-            var student = students.FirstOrDefault(x => x.Id == textBox1.Text);
+            var student = students.FirstOrDefault(x => x.Id == txtId.Text);
             if (student != null)
             {
                 students.Remove(student);
-                MessageBox.Show("Đã xóa sinh viên!");
                 DisplayStudents();
+                MessageBox.Show("Đã xóa sinh viên!");
             }
             else
             {
-                MessageBox.Show("Không tìm thấy sinh viên!");
+                MessageBox.Show("Không tìm thấy sinh viên để xóa!");
             }
         }
 
